@@ -1,0 +1,10 @@
+.gitattributes
+ HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+*.log
+.settings/
+.project
+.classpath
+.idea/
+*.iml
