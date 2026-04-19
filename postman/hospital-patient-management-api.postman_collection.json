@@ -1,0 +1,430 @@
+{
+  "info": {
+    "_postman_id": "680af6e2-bccc-418b-9b7e-dbfb5213bf7a",
+    "name": "hospital-patient-management-api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "22761386"
+  },
+  "item": [
+    {
+      "name": "addPatient",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\r\n    \"firstName\": \"Bill\",\r\n    \"lastName\": \"Nguyen\",\r\n    \"dateOfBirth\": \"1988-09-14\",\r\n    \"phoneNumber\": \"+1555789123\",\r\n    \"email\": \"bill.nguyen@email.com\",\r\n    \"address\": \"753 Walnut St, San Diego, CA\",\r\n    \"emergencyContact\": \"Minh Nguyen - +1555789124\",\r\n    \"bloodType\": \"AB_NEGATIVE\"\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/patients",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "patients"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updatePatient",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"firstName\": \"Johnny\",\r\n\"lastName\": \"Does\",\r\n\"dateOfBirth\": \"1985-05-15\",\r\n\"phoneNumber\": \"+1234567890\",\r\n\"email\": \"john.doe@email.com\",\r\n\"address\": \"123 Main St, City, State\",\r\n\"emergencyContact\": \"Jane Doe - +0987654321\",\r\n\"bloodType\": \"O_POSITIVE\",\r\n\"isActive\":true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/patients/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "patients",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getPatient",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"firstName\": \"Johnny\",\r\n\"lastName\": \"Doe\",\r\n\"dateOfBirth\": \"1985-05-15\",\r\n\"phoneNumber\": \"+1234567890\",\r\n\"email\": \"john.doe@email.com\",\r\n\"address\": \"123 Main St, City, State\",\r\n\"emergencyContact\": \"Jane Doe - +0987654321\",\r\n\"bloodType\": \"O_POSITIVE\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/patients/5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "patients",
+            "5"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getAllPatient",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"firstName\": \"Johnny\",\r\n\"lastName\": \"Doe\",\r\n\"dateOfBirth\": \"1985-05-15\",\r\n\"phoneNumber\": \"+1234567890\",\r\n\"email\": \"john.doe@email.com\",\r\n\"address\": \"123 Main St, City, State\",\r\n\"emergencyContact\": \"Jane Doe - +0987654321\",\r\n\"bloodType\": \"O_POSITIVE\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/patients",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "patients"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deletePatient",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"firstName\": \"Johnny\",\r\n\"lastName\": \"Doe\",\r\n\"dateOfBirth\": \"1985-05-15\",\r\n\"phoneNumber\": \"+1234567890\",\r\n\"email\": \"john.doe@email.com\",\r\n\"address\": \"123 Main St, City, State\",\r\n\"emergencyContact\": \"Jane Doe - +0987654321\",\r\n\"bloodType\": \"O_POSITIVE\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/patients/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "patients",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Public Access",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/test/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "test",
+            "all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Public Access wildfly",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/hospital-patient-management-api-0.0.1-SNAPSHOT/api/test/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "hospital-patient-management-api-0.0.1-SNAPSHOT",
+            "api",
+            "test",
+            "all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Protected Access",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "signin",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\":\"mod\",\r\n    \"password\":\"12345678\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/auth/signin",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "auth",
+            "signin"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "signin wildfly",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\":\"wildfly-test\",\r\n    \"password\":\"password123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/hospital-patient-management-api-0.0.1-SNAPSHOT/api/auth/signin",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "hospital-patient-management-api-0.0.1-SNAPSHOT",
+            "api",
+            "auth",
+            "signin"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User Access",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "I1NiJ9.eyJzdWIiOiJtb2QiLCJpYXQiOjE3NzY0ODY5NjIsImV4cCI6MTc3NjU3MzM2Mn0.iCQB0mtyIluZbgYTKrwMNiuZIebhmCvwy8GwyBoWs_c",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb2QiLCJpYXQiOjE3NzY0ODQ5NzMsImV4cCI6MTc3NjU3MTM3M30.gQcfEypyrpEANFMIoP6NRM0sNiI1qnDBwVbCvWCm6SU",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8081/api/test/user",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "test",
+            "user"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Moderator Access",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb2QiLCJpYXQiOjE3NzY0ODY5NjIsImV4cCI6MTc3NjU3MzM2Mn0.iCQB0mtyIluZbgYTKrwMNiuZIebhmCvwy8GwyBoWs_c",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/test/mod",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "test",
+            "mod"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Admin Access",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb2QiLCJpYXQiOjE3NzY0ODY5NjIsImV4cCI6MTc3NjU3MzM2Mn0.iCQB0mtyIluZbgYTKrwMNiuZIebhmCvwy8GwyBoWs_c",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/test/admin",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "test",
+            "admin"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "signup",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\r\n    \"username\": \"sitizkoder\",\r\n    \"email\": \"user@bezkoder.com\",\r\n    \"password\": \"12345678\",\r\n    \"role\": [\"user\"]\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/auth/signup",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "auth",
+            "signup"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "signup wildfly",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\r\n    \"username\": \"wildfly-test\",\r\n    \"email\": \"wildfly@test.com\",\r\n    \"password\": \"password123\",\r\n    \"role\": [\"user\"]\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/hospital-patient-management-api-0.0.1-SNAPSHOT/api/auth/signup",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "hospital-patient-management-api-0.0.1-SNAPSHOT",
+            "api",
+            "auth",
+            "signup"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
