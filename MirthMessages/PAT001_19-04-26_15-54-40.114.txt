@@ -1,0 +1,8 @@
+=== Patient Admission Record ===
+Date Received: 19-04-26_15-54-40.115
+Patient ID:    PAT001
+Patient Name:  Viet Nguyen
+Date of Birth: ${dob}
+Gender:        ${gender}
+Phone:         +60123456789
+=================================
