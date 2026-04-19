@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.hospital_patient_management_api.model.Patient;
 import com.hospital_patient_management_api.service.PatientService;
 
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api")
